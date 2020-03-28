@@ -1,12 +1,12 @@
 $(document).ready(function (datasource) {
 
 	var indicator = $('#CSV').val();
-	var datasource = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv";
+	var datasource = "https://coviddata.github.io/covid-api/v1/places/cases.csv";
 	var myConnector = tableau.makeConnector();
 	
 	$('#CSV').on('change keyup paste click', function() {
     indicator = $('#CSV').val();
-	datasource = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv";
+	datasource = "https://coviddata.github.io/covid-api/v1/places/cases.csv";
 	tableau.connectionData = datasource;
 	});
 	
@@ -99,7 +99,7 @@ $(document).ready(function (datasource) {
 	$(document).ready(function () {
 		$("#submitButton").click(function () {
 			indicator = $('#CSV').val();
-			datasource = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv";
+			datasource = "https://coviddata.github.io/covid-api/v1/places/cases.csv";
 			tableau.connectionData = datasource;
 			tableau.connectionName = "WDCcsv";
 			tableau.connectionData = datasource;
