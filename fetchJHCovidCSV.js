@@ -22,6 +22,7 @@ $(document).ready(function (datasource) {
 		function successFunction(data) {
 			var data = data.replace(/\"/g, "");
 			var data = data.replace(/ /g, '');
+			var data = data.replace(/-/g, ''); // this removes hyphens
 			var allRows = data.split(/\r?\n|\r/);
 			var cols = [];
 			for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
@@ -35,7 +36,7 @@ $(document).ready(function (datasource) {
 							alias: x,
 							dataType: tableau.dataTypeEnum.string
 						};
-						var y = y.replace(/-/g, ''); // this removes hyphens
+						
 						cols.push(y);
 					}
 				}
