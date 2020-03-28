@@ -22,7 +22,7 @@ $(document).ready(function (datasource) {
 		function successFunction(data) {
 			var data = data.replace(/\"/g, "");
 			var data = data.replace(/ /g, '');
-			var data = data.replace(/-/g, ''); // this removes hyphens
+			var data = data.replace(/3/g, ''); // this removes hyphens
 			var allRows = data.split(/\r?\n|\r/);
 			var cols = [];
 			for (var singleRow = 0; singleRow < allRows.length; singleRow++) {
